@@ -4,6 +4,7 @@ vps-react-ts-2
 - [Installed dependencies + configurations](#installed-dependencies--configurations)
   - [**Vite-plugin-ssr**](#vite-plugin-ssr)
   - [**Typescript**](#typescript)
+    - [Compileroptions configurations](#compileroptions-configurations)
   - [**Vite**](#vite)
   - [**SASS**](#sass)
     - [**Sass**](#sass-1)
@@ -16,7 +17,7 @@ Vite-plugin-ssr with react + typescript
 
 ## **Vite-plugin-ssr**
 
-Command:
+Command used:
 
 `npm init vite-plugin-ssr@latest`
 
@@ -38,6 +39,12 @@ The chosen CLI option `react-ts` installs:
 - @types/node
 - @types/react
 - @types/react-dom
+
+### Compileroptions configurations
+
+To not have to import React:
+
+`"jsx": "react-jsx"`
 
 ## **Vite**
 

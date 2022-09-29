@@ -1,0 +1,66 @@
+/*
+  Contents:
+
+    - html elements
+    - foundational parts
+    - other 
+
+*/
+
+/* -------------- html elements ----------------- */
+body {
+  background: var(--main-1);
+  background: linear-gradient(to right, var(--main-1) 0%, var(--main-1-alt));
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+ul,nav {
+  list-style-type: none;
+}
+
+button.primary{
+  background-color: var(--item-bg-color);
+}
+
+/* -------------- foundational parts ----------------- */
+
+.page-body {
+  padding-top: 20px;
+}
+
+
+/* -------------- other ----------------- */
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+// .home {
+
+//   // @media (max-width: $xs-max) {
+//   @media (max-width: $xs-max) {
+
+//       background: purple;
+//       p {
+//           background: var(--item-bg-color);
+//           font-size: 8em;
+//       }
+//   }
+// }

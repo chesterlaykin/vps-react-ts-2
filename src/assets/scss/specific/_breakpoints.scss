@@ -1,0 +1,67 @@
+
+/* Media query definitions
+    these breakpoints should correspond to the breakpoints in bootstraps $grid-breakpoints in _variables.scss 
+
+    They are being defined both as sass variable and as css variable
+*/ 
+
+/* ----------------------- SASS Variables ----------------------- */
+
+$xs-max:      '575px';               
+$sm:          '576px';       
+$sm-max:      '767px';
+$md:          '768px';      
+$md-max:      '991px';
+$lg:          '992px';
+$lg-max:      '1199px';   
+$xl:          '1200px';
+
+
+$xs-xs:       'screen and (max-width: #{$xs-max})';
+$sm-sm:       'screen and (min-width:#{$sm}) and (max-width: #{$sm-max})';
+$md-md:       'screen and (min-width:#{$md}) and (max-width: #{$md-max})';
+$lg-lg:       'screen and (min-width:#{$lg}) and (max-width: #{$lg-max})';
+$xl-xl:       'screen and (min-width: #{$xl})';
+
+$xs-sm:         'screen and (max-width: #{$sm-max})';
+$xs-md:         'screen and (max-width: #{$sm-max})';
+$sm-md:         'screen and (min-width:#{$sm}) and (max-width: #{$md-max})';
+$sm-lg:         'screen and (min-width:#{$sm}) and (max-width: #{$lg-max})';
+$md-lg:         'screen and (min-width:#{$md}) and (max-width: #{$lg-max})';
+
+$sm-unlim:      'screen and (min-width: #{$sm})';
+$md-unlim:      'screen and (min-width: #{$md})';
+$lg-unlim:      'screen and (min-width: #{$lg})';
+$xl-unlim:      'screen and (min-width: #{$xl})';
+
+
+/* ----------------------- CSS Variables ----------------------- */
+
+// :root {
+// --xs-xs:       'screen and (max-width: #{var(--xs-max)})';
+// --sm-sm:       'screen and (min-width:#{var(--sm)}) and (max-width: #{var(--sm-max)})';
+// --md-md:       'screen and (min-width:#{var(--md)}) and (max-width: #{var(--md-max)})';
+// --lg-lg:       'screen and (min-width:#{var(--lg)}) and (max-width: #{var(--lg-max)})';
+// --xl-xl:       'screen and (min-width: #{var(--xl)})';
+
+// --xs-sm:         'screen and (max-width: #{var(--sm-max)})';
+// --xs-md:         'screen and (max-width: #{var(--sm-max)})';
+// --sm-md:         'screen and (min-width:#{var(--sm)}) and (max-width: #{var(--md-max)})';
+// --sm-lg:         'screen and (min-width:#{var(--sm)}) and (max-width: #{var(--lg-max)})';
+// --md-lg:         'screen and (min-width:#{var(--md)}) and (max-width: #{var(--lg-max)})';
+
+// --sm-unlim:      'screen and (min-width: #{var(--sm)})';
+// --md-unlim:      'screen and (min-width: #{var(--md)})';
+// --lg-unlim:      'screen and (min-width: #{var(--lg)})';
+// --xl-unlim:      'screen and (min-width: #{var(--xl)})';
+
+// --xs-max:      '575px';               
+// --sm:          '576px';       
+// --sm-max:      '767px';
+// --md:          '768px';      
+// --md-max:      '991px';
+// --lg:          '992px';
+// --lg-max:      '1199px';   
+// --xl:          '1200px';
+
+// }

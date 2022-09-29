@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'yanonekaffeesatz';
+    src: url('@/assets/fonts/YanoneKaffeesatz-VariableFont_wght.ttf') format('truetype supports variations');
+    src: url('@/assets/fonts/YanoneKaffeesatz-VariableFont_wght.ttf') format('truetype-variations');
+    // src: url('@/assets/fonts/YanoneKaffeesatz-Medium.woff') format('woff');
+    font-weight: 100 600;   
+  }
+
+
+:root {
+    --fallback-font: "Courier New", "Arial Narrow", system-ui, -apple-system;   
+    --font-family-1: 'yanonekaffeesatz', var(--fallback-font); 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-1);
+  font-weight: 400;
+}
+h1 {
+  font-size: 3em;
+  // @media screen and (max-width: $xs-max) {
+  //   font-size: 2em;
+  // }
+}
+p,
+a {
+  font-family: 'yanonekaffeesatz';
+}
+p {
+  font-weight: 300;
+  font-size: 21px;
+}
