@@ -11,7 +11,7 @@ vps-react-ts-2
 
 # Comments
 
-Vite-plugin-ssr with react + typescript
+VPS-react-ts-2 (Vite-plugin-ssr with react + typescript)
 
 # Installed dependencies + configurations
 

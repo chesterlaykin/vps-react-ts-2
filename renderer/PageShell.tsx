@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from '@/assets/svg/logo.svg';
 import { PageContextProvider } from "./usePageContext";
 import type { PageContext } from "./types";
 import "./PageShell.css";
@@ -18,11 +18,9 @@ function PageShell({
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
-        {/* <Layout> */}
         <Layout1>
           <Content>{children}</Content>
         </Layout1>
-        {/* </Layout>   */}
       </PageContextProvider>
     </React.StrictMode>
   );

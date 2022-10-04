@@ -17,9 +17,9 @@
       "@@/*": [
         "./src/components/*"
       ],
-      "#root/*": [
-        "."
-      ]
+      // "#root/*": [
+      //   "."
+      // ]
     }
   },
   "ts-node": {
@@ -27,5 +27,8 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "files": [
+    "declarations.d.ts"
+  ]
 }

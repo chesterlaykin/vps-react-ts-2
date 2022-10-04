@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { OtherThing } from "../tests/OtherThing"
 
 interface ITopic{
     title: string
@@ -18,5 +19,8 @@ export const SomeTest = () => {
         posts: [] 
     });
 
-    return <h1>Test!</h1>
+    return <div>
+        <h1>Test!</h1>
+        <OtherThing/>
+    </div>
 }

@@ -1,4 +1,4 @@
-import ''
+import logo from '@/assets/svg/logo.svg';
 
 export function Logo() {
     return (
@@ -9,7 +9,7 @@ export function Logo() {
         }}
       >
         <a href="/">
-          {/* <img src={logo} height={64} width={64} alt="logo" /> */}
+          <img src={logo} height={64} width={64} alt="logo" />
         </a>
       </div>
     );

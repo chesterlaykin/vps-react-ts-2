@@ -9,7 +9,7 @@ const config: UserConfig = {
     alias: {
       "@": resolve(__dirname, './src'),
       "@@": resolve(__dirname, './src/components'), 
-      "#root": __dirname,
+      // "#root": resolve(__dirname),
     },
   },
   css: {

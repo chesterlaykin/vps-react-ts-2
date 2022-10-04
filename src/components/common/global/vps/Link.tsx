@@ -1,5 +1,5 @@
 import React from "react";
-import { usePageContext } from "../../../../../renderer/usePageContext";
+import { usePageContext } from "renderer/usePageContext";
 
 export { Link };
 
@@ -8,7 +8,7 @@ type IProps = {
   className?: string;
   children: React.ReactNode;
 };
-
+// props: IProps
 function Link(props: IProps) {
   const pageContext = usePageContext();
   const className = [
@@ -17,5 +17,6 @@ function Link(props: IProps) {
   ]
     .filter(Boolean)
     .join(" ");
+
   return <a {...props} className={className} />;
 }

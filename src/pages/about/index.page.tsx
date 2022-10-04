@@ -1,3 +1,4 @@
+
 import { SomeTest } from '@/components/common/SomeTest'
 import './code.css'
 
@@ -10,7 +11,12 @@ function Page() {
       <p>
         Demo using <code>vite-plugin-ssr</code>.
       </p>
-      <SomeTest
+       <SomeTest/>
     </>
   )
+}
+
+export const documentProps = {
+  title: 'About',
+  description: 'Fun about page'
 }
