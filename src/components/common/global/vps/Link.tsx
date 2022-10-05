@@ -1,8 +1,11 @@
 import React from "react";
-import { usePageContext } from "renderer/usePageContext";
-
+// import { usePageContext } from "../../../../../renderer/usePageContext";
+import { usePageContext } from "/renderer/usePageContext";
+import { SomeType } from 'renderer/sometype';
 export { Link };
-
+const thing: SomeType = {
+  data: ['ff']
+}
 type IProps = {
   href?: string;
   className?: string;
@@ -18,5 +21,8 @@ function Link(props: IProps) {
     .filter(Boolean)
     .join(" ");
 
-  return <a {...props} className={className} />;
+  return <div>
+    {/* <span>Msg:{ thing.data[0]}</span> */}
+    <a {...props} className={className} />
+  </div>
 }

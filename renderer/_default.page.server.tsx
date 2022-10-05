@@ -1,11 +1,26 @@
 import ReactDOMServer from 'react-dom/server'
-import React from 'react'
 import { PageShell } from './PageShell'
 import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr'
 import logoUrl from '@/assets/svg/logo.svg';
 import type { PageContextServer } from './types'
 
 export { render }
+
+export { onBeforeRender }
+
+async function onBeforeRender(pageContext: PageContextServer) {
+  console.log('onBeforeRender!')
+  // Our `query` export values are available at `pageContext.exports.query`
+  const { query } = pageContext.exports
+  const data = await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(true);
+    }, 50);
+  });
+  const pageProps = { data }
+  return { pageContext: { pageProps } }
+}
+
 // See https://vite-plugin-ssr.com/data-fetching
 export const passToClient = ['pageProps', 'urlPathname']
 

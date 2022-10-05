@@ -1,12 +1,14 @@
 import { SomeTest } from '@/components/common/SomeTest'
 import { Counter } from './Counter'
+// import {myFunc} from 'functions/oneFunction';
+// import pkJson from '/package.json';
 
 export { Page }
 
 function Page() {
   return (
     <>
-      <h1>Welcome</h1>
+      <h1>VPS-react-ts-2</h1>
       This page is:
       <ul>
         <li>Rendered to HTML.</li>
@@ -15,6 +17,7 @@ function Page() {
         </li>
       </ul>
       <SomeTest />
+      {/* <p>Msg: {myFunc()}</p> */}
     </>
   )
 }
