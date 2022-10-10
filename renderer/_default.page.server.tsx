@@ -7,49 +7,45 @@ import type { PageContextServer } from "./types";
 //Redux
 import { Provider } from "react-redux";
 import { configureStore } from '@reduxjs/toolkit';
-import { storeConfiguration } from '@/redux/store';
+import { getStore } from '@/redux/store';
+// import {ConfigureStoreOptions} from '@reduxjs/toolkit/dist/configureStore';
 
 export { render };
 
-export { onBeforeRender };
+export { onBeforeRender, passToClient };
 
 async function onBeforeRender(pageContext: PageContextServer) {
   console.log("onBeforeRender!");
 
   // Our `query` export values are available at `pageContext.exports.query`
   const { query } = pageContext.exports;
-  const data = await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(true);
-    }, 50);
-  });
-  const pageProps = { data };
+  const pageProps = {};
 
   /* ------------- Redux SSR -------------
     Get html and initial state:
       html: render Page wrapped with Provider and store  
   */
   const { Page } = pageContext;
-  const store = configureStore(storeConfiguration);
+  const store = getStore();
   const pageHtml = ReactDOMServer.renderToString(
     <Provider store={store}>
       <Page />
     </Provider>
   );
   //  state: get initial state
-  const PRELOADED_STORE_CONFIGURATION = storeConfiguration; //store.getState()
-
+  const PRELOADED_STATE  = store.getState()
+// console.log('PRELOADED_STATE',PRELOADED_STATE)
   // -------------------------------------
 
   return { pageContext: { 
     pageProps,
-    PRELOADED_STORE_CONFIGURATION,
+    PRELOADED_STATE,
     pageHtml
   }};
 }
 
 // See https://vite-plugin-ssr.com/data-fetching
-export const passToClient = ["pageProps", "urlPathname", "PRELOADED_STORE_CONFIGURATION"];
+const passToClient = ["pageProps", "urlPathname", "PRELOADED_STATE"];
 
 async function render(pageContext: PageContextServer) {
   const { Page, pageProps } = pageContext;

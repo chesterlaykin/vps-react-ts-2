@@ -4,15 +4,18 @@ import { PageShell } from "./PageShell";
 import type { PageContextClient } from "./types";
 
 //redux
-import { configureStore } from "@reduxjs/toolkit";
+// import { configureStore } from "@reduxjs/toolkit";
+import { getStore } from '@/redux/store';
 import { Provider } from "react-redux";
 
 export { render };
 
 async function render(pageContext: PageContextClient) {
-  const { Page, pageProps } = pageContext;
-  const store = configureStore(pageContext.PRELOADED_STORE_CONFIGURATION);
-  
+  const { Page, pageProps, PRELOADED_STATE } = pageContext;
+  const store = getStore(PRELOADED_STATE );
+
+
+  console.log('store w PRELOADED_STATE',store)
   hydrateRoot(
     document.getElementById("page-view")!,
     <Provider store={store}>

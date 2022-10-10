@@ -23,7 +23,7 @@ export type PageContextCustom = {
       description?: string
     }
   },
-  PRELOADED_STORE_CONFIGURATION: ConfigureStoreOptions
+  PRELOADED_STATE : ConfigureStoreOptions
 }
 
 type PageContextServer = PageContextBuiltIn<Page> & PageContextCustom

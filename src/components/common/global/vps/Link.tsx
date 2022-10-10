@@ -1,6 +1,6 @@
 import React from "react";
-// import { usePageContext } from "../../../../../renderer/usePageContext";
-import { usePageContext } from "/renderer/usePageContext";
+import { usePageContext } from "../../../../../renderer/usePageContext";
+// import { usePageContext } from "/renderer/usePageContext";
 import { SomeType } from 'renderer/sometype';
 export { Link };
 const thing: SomeType = {

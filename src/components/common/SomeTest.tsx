@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { OtherThing } from "../tests/OtherThing"
+import { OtherThing } from "@@/tests/OtherThing"
 
 interface ITopic{
     title: string

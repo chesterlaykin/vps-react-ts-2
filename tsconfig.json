@@ -10,17 +10,10 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "baseUrl": ".",
-    "rootDir": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@@/*": [
-        "./src/components/*"
-      ],
-      "#root/*": [
-        "."
-      ]
+      "@/*": [ "./src/*" ],
+      "@@/*": [ "./src/components/*" ],
+      "#root/*": [ "." ]
     }
   },
   "ts-node": {
@@ -29,7 +22,7 @@
       "module": "CommonJS"
     }
   },
-  "files": [
-    "declarations.d.ts"
-  ]
+  // "files": [
+  //   "files/declarations.d.ts"
+  // ]
 }

@@ -1,5 +1,3 @@
-
-import { SomeTest } from '@/components/common/SomeTest'
 import './code.css'
 
 export { Page }
@@ -11,7 +9,6 @@ function Page() {
       <p>
         Demo using <code>vite-plugin-ssr</code>.
       </p>
-       <SomeTest/>
     </>
   )
 }
