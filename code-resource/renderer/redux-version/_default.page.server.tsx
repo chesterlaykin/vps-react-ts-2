@@ -4,6 +4,15 @@ import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr";
 import logoUrl from "@/assets/svg/logo.svg";
 import type { PageContextServer } from "./types";
 
+//Redux
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
+import { createStore } from "redux";
+import { setupStore, rootReducer } from "@/redux/store";
+import type { RootState } from "@/redux/store";
+import type { PreloadedState } from "@reduxjs/toolkit";
+// import {ConfigureStoreOptions} from '@reduxjs/toolkit/dist/configureStore';
+
 export { render };
 
 export { onBeforeRender, passToClient };
@@ -22,14 +31,26 @@ async function onBeforeRender(pageContext: PageContextServer) {
   */
   const { Page } = pageContext;
 
+  const store = createStore(rootReducer);
+  // const store = configureStore({ reducer: {} });
+  // const preloadedState  = { reducer: rootReducer }
+  // const store = setupStore();
+  // const store = getStore();
   const pageHtml = ReactDOMServer.renderToString(
     <Page />
+    // <Provider store={store}>
+    //   <Page />
+    // </Provider>
   );
+  //  state: get initial state
+  // const PRELOADED_STATE  = store.getState()
+  // console.log('PRELOADED_STATE',PRELOADED_STATE)
   // -------------------------------------
 
   return {
     pageContext: {
       pageProps,
+      // PRELOADED_STATE,
       pageHtml,
     },
   };

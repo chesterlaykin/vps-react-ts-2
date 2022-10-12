@@ -1,23 +1,22 @@
 
 import { useState } from 'react'
-import React from 'react';
 // import { useAppDispatch, useAppSelector } from '@/redux/hooks';
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import { incremented, amountAdded } from '../../redux/features/somefeature/somefeature-slice';
+import { useDispatch, useSelector } from 'react-redux';
+import { incremented, amountAdded } from '@/redux/features/somefeature/somefeature-slice';
 import { useFetchSomeOtherFeatureCategoryQuery } from '@/redux/features/someotherfeature-api/someotherfeature-api-slice'
 // import {thing} from '@/redux/hooks';
 import "./redux.scss";
 
-// export { Page };
-
-
-export function Page() {
+export { Page };
+// export 
+function Page() {
   // const thing2 = thing;
   const count = useSelector((state:any) => state.somefeature.value);
   // const dispatch = useAppDispatch();
   return <h1>redux!</h1>
-  const [numItems, setNumItems] = useState(10);
-  const { data = [], isFetching } = useFetchSomeOtherFeatureCategoryQuery(numItems);
+
+  // const [numItems, setNumItems] = useState(10);
+  // const { data = [], isFetching } = useFetchSomeOtherFeatureCategoryQuery(numItems);
 
   function handleClick() {
     // increment by 1

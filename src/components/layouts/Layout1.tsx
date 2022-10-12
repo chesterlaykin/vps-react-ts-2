@@ -16,9 +16,9 @@ export function Layout1({ children }: { children: React.ReactNode }) {
               <Link className="navitem" href="/about">
                 About
               </Link>
-              <Link className="navitem" href="/redux">
+              {/* <Link className="navitem" href="/redux">
                 Redux tests
-              </Link>
+              </Link> */}
             </Sidebar>
           </div>
           <div className="g-col-sm-8 g-col-md-9 g-col-12">{children}</div>

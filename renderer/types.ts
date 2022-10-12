@@ -8,7 +8,7 @@ import type { PageContextBuiltIn } from 'vite-plugin-ssr'
 import type { PageContextBuiltInClient } from 'vite-plugin-ssr/client' // When using Server Routing
 
 //types from toolkit interface
-import {ConfigureStoreOptions} from '@reduxjs/toolkit/dist/configureStore';
+// import {ConfigureStoreOptions} from '@reduxjs/toolkit/dist/configureStore';
 
 type Page = (pageProps: PageProps) => React.ReactElement
 type PageProps = {}
@@ -23,7 +23,7 @@ export type PageContextCustom = {
       description?: string
     }
   },
-  PRELOADED_STATE : ConfigureStoreOptions
+  // PRELOADED_STATE : ConfigureStoreOptions
 }
 
 type PageContextServer = PageContextBuiltIn<Page> & PageContextCustom

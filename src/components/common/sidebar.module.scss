@@ -6,4 +6,14 @@
   flex-direction: column;
   align-items: center;
   line-height: 1.8em;
+
+   a {
+    color: var(--blue);
+  } 
+}
+// .sidebar a {
+//   color: var(--blue);
+// }
+.funny {
+  color: red;
 }

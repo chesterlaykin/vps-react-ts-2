@@ -1,6 +1,8 @@
 vps-react-ts-2
 
+- [VPS-react-ts-2](#vps-react-ts-2)
 - [Comments](#comments)
+  - [oct 2022](#oct-2022)
 - [Installed dependencies + configurations](#installed-dependencies--configurations)
   - [**Vite-plugin-ssr**](#vite-plugin-ssr)
   - [**Typescript**](#typescript)
@@ -9,9 +11,13 @@ vps-react-ts-2
   - [**SASS**](#sass)
     - [**Sass**](#sass-1)
 
+# VPS-react-ts-2
+VPS-react-ts-2 (Vite-plugin-ssr with react + typescript)
 # Comments
 
-VPS-react-ts-2 (Vite-plugin-ssr with react + typescript)
+## oct 2022
+
+Added redux toolkit code
 
 # Installed dependencies + configurations
 

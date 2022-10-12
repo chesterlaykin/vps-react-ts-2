@@ -15,7 +15,7 @@ const config: UserConfig = {
   css: {
     preprocessorOptions: {
     scss: {
-      additionalData: `@import "@/assets/scss/start-files/index.scss";`
+      // additionalData: `@import "@/assets/scss/start-files/index.scss";`
     }
   }
 }

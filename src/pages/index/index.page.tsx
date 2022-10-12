@@ -2,6 +2,7 @@ import { SomeTest } from '@/components/common/SomeTest'
 import { Counter } from './Counter'
 // import {myFunc} from 'functions/oneFunction';
 // import pkJson from '/package.json';
+import './index.scss';
 
 export { Page }
 
@@ -10,13 +11,14 @@ function Page() {
     <>
       <h1>VPS-react-ts-2</h1>
       This page is:
-      <ul>
+      <ul className='funny'>
         <li>Rendered to HTML.</li>
         <li>
           Interactive. <Counter />
         </li>
       </ul>
-      <SomeTest />
+      <a href="/about">{'->'}About</a>
+      {/* <SomeTest /> */}
       {/* <p>Msg: {myFunc()}</p> */}
     </>
   )
