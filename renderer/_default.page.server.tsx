@@ -4,28 +4,34 @@ import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr";
 import logoUrl from "@/assets/svg/logo.svg";
 import type { PageContextServer } from "./types";
 
+//Redux
+import { Provider } from "react-redux";
+import { setupStore } from "../src/redux/store";
+
 export { render };
 
 export { onBeforeRender, passToClient };
 
-// async function onBeforeRender(pageContext: PageContextServer) {
 async function onBeforeRender(pageContext: PageContextServer) {
-  console.log("onBeforeRender!");
 
   // Our `query` export values are available at `pageContext.exports.query`
   const { query } = pageContext.exports;
   const pageProps = {};
 
   /* ------------- Redux SSR -------------
-    Get html and initial state:
-      html: render Page wrapped with Provider and store  
+    Hydration match: What is rendered here needs to match what is rendered
+    on the client (_default.page.client.tsx)
   */
   const { Page } = pageContext;
 
+  const store = setupStore();
   const pageHtml = ReactDOMServer.renderToString(
-    <Page />
+    <Provider store={store}>
+      <PageShell pageContext={pageContext}>
+        <Page {...pageProps} />
+      </PageShell>
+    </Provider>
   );
-  // -------------------------------------
 
   return {
     pageContext: {
@@ -36,18 +42,12 @@ async function onBeforeRender(pageContext: PageContextServer) {
 }
 
 // See https://vite-plugin-ssr.com/data-fetching
-// const passToClient = ["pageProps", "urlPathname", "PRELOADED_STATE"];
+
 const passToClient = ["pageProps", "urlPathname"];
 
 async function render(pageContext: PageContextServer) {
-  const { Page, pageProps } = pageContext;
-  const pageHtml = ReactDOMServer.renderToString(
-    <PageShell pageContext={pageContext}>
-      <Page {...pageProps} />
-    </PageShell>
-  );
+  const { pageHtml } = pageContext;
 
-  // See https://vite-plugin-ssr.com/head
   const { documentProps } = pageContext.exports;
   const title = (documentProps && documentProps.title) || "Vite SSR app";
   const desc =

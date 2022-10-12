@@ -23,6 +23,7 @@ export type PageContextCustom = {
       description?: string
     }
   },
+  pageHtml: string
   // PRELOADED_STATE : ConfigureStoreOptions
 }
 
