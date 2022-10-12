@@ -9,11 +9,12 @@
     "jsx": "react-jsx",
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "useDefineForClassFields": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [ "./src/*" ],
-      "@@/*": [ "./src/components/*" ],
-      "#root/*": [ "." ]
+      "@/*": ["./src/*"],
+      "@@/*": ["./src/components/*"],
+      "#root/*": ["."]
     }
   },
   "ts-node": {
@@ -21,7 +22,7 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  },
+  }
   // "files": [
   //   "files/declarations.d.ts"
   // ]

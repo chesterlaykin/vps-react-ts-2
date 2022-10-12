@@ -10,6 +10,9 @@ vps-react-ts-2
   - [**Vite**](#vite)
   - [**SASS**](#sass)
     - [**Sass**](#sass-1)
+  - [MobX](#mobx)
+  - [Redux](#redux)
+  - [Eslint](#eslint)
 
 # VPS-react-ts-2
 VPS-react-ts-2 (Vite-plugin-ssr with react + typescript)
@@ -65,3 +68,31 @@ Installed:
 ### **Sass**
 
 Sass
+
+## MobX
+
+Packages:
+
+mobx 
+mobx-react
+
+`yarn add mobx mobx-react`
+
+Added to tsconfig:
+
+`"useDefineForClassFields": true,`
+
+## Redux
+
+@reduxjs/toolkit
+react-redux
+
+If not in use, everything redux can be put away in "code-resources" folder
+
+## Eslint
+
+eslint
+@typescript-eslint/parser
+eslint-plugin-mobx
+
+`yarn add eslint @typescript-eslint/parser eslint-plugin-mobx -D`

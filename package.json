@@ -17,6 +17,8 @@
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
     "express": "^4.18.1",
+    "mobx": "^6.6.2",
+    "mobx-react": "^7.5.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-redux": "^8.0.4",
@@ -27,6 +29,9 @@
     "vite-plugin-ssr": "^0.4.39"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.25.0",
+    "eslint-plugin-mobx": "^0.0.9",
     "sass": "^1.55.0"
   }
 }

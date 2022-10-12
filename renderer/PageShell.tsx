@@ -27,6 +27,9 @@ function PageShell({
 }
 
 function Content({ children }: { children: React.ReactNode }) {
+
+  //babel test related to MobX
+  if (!new class { x: any }().hasOwnProperty('x')) throw new Error('Transpiler is not configured correctly');
   return (
     <div
       style={{
