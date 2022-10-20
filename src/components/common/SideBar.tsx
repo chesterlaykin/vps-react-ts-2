@@ -6,7 +6,7 @@ import s from './sidebar.module.scss';
 export const Sidebar = (props: JSX.Props) => {
   const {children} = props;
   return (
-    <div className={`${s.sidebar} ${s.funny}`}> 
+    <div className={`${s.sidebar} ${s.funny}`}>
       {children}
     </div>
   );

@@ -1,6 +1,7 @@
 export interface ISBLinkButton {
-    name: string,
-    phone: string
+    text: string,
+    phone: string,
+    targetBlank?: boolean
 }
 export interface ITask {
     task: string,
@@ -12,3 +13,4 @@ export interface IInternalLink{
     url: string,
     title: string,
 }
+

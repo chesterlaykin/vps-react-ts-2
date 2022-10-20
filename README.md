@@ -20,7 +20,11 @@ VPS-react-ts-2 (Vite-plugin-ssr with react + typescript)
 
 ## oct 2022
 
-Added redux toolkit code
+
+- Added usehooks-ts
+- Added products components and json-data
+- Added MobX, alternative to Redux
+- Added redux toolkit code
 
 # Installed dependencies + configurations
 
