@@ -100,7 +100,6 @@ export const ProductCard = ({ modelType, text }: IProps) => {
   },[product]);
 
   return (
-    // ["product-card"]
     <div ref={productCardWrapper} className={s["product-card"]}>
       <ProductCardFrontSide {...productProps} />
     </div>

@@ -7,6 +7,5 @@ const defaultProps = {
 }
 export const Wrapper = (pr: IProps) => {
   pr = { ...defaultProps, ...pr };
-  console.log('Wrapper!')
   return pr.useWrapper ? pr.wrapper(pr.children) : pr.children;
 }

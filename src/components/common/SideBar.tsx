@@ -1,4 +1,3 @@
-import './sidebar.module.scss';
 import s from './sidebar.module.scss';
 
 // export const Sidebar = ( props:any, { children }: { children: React.ReactNode }) => {

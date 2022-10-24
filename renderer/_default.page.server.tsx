@@ -19,7 +19,7 @@ async function onBeforeRender(pageContext: PageContextServer) {
   const pageProps = {};
 
   /* ------------- Redux SSR -------------
-    Hydration match: What is rendered here needs to match what is rendered
+    NOTE! Hydration match: What is rendered here needs to match what is rendered
     on the client (_default.page.client.tsx)
   */
   const { Page } = pageContext;

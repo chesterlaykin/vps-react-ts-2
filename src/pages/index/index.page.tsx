@@ -1,6 +1,4 @@
-import { SomeTest } from '@/components/common/SomeTest'
 import { Counter } from './Counter'
-// import {myFunc} from 'functions/oneFunction';
 // import pkJson from '/package.json';
 import './index.scss';
 

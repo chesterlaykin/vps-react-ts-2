@@ -1,5 +1,3 @@
-// import {  } from '@/fffff';
-// import { ffff } from '@/types/fff';
 import { DataSlider } from "@/components/app-parts/novicell/DataSlider";
 import s from "./product-card-frontside.module.scss";
 import { ProductCardFooter } from "./ProductCardFooter";
@@ -27,7 +25,6 @@ const defaultProps = {
 
 export const ProductCardFrontSide = (pr: IProps) => {
   pr = { ...defaultProps, ...pr };
-
   const { glossRating: glossR } = pr.characteristicsRatings;
 
   const glossRating = glossR && glossR > 0 ? glossR : false;

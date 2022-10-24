@@ -10,7 +10,6 @@ const config: UserConfig = {
       "@": resolve(__dirname, './src'),
       "@@": resolve(__dirname, './src/components'),
       "~": resolve(__dirname, '.'),
-      // "~/*": resolve(__dirname, './*'),
       "#root": resolve(__dirname),
     },
   },

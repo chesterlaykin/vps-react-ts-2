@@ -1,6 +1,3 @@
-// import {  } from '@/fffff';
-// import { ffff } from '@/types/fff';
-
 import { useEffect, useState } from "react";
 
 import s from "./dataslider.module.scss";
