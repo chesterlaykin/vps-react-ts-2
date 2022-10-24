@@ -10,3 +10,8 @@ export interface ITopicPost{
     text?: string
     image?: Image
 }
+export interface IMenuItem{
+    className: string
+    href?: string
+    text: string
+}

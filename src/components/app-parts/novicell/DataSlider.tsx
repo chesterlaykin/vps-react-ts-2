@@ -15,8 +15,8 @@ const initialValues = {
   value: 0,
 };
 
-export const DataSlider = (props: IProps) => {
-  props = { ...initialValues, ...props };
+export const DataSlider = (pr: IProps) => {
+  pr = { ...initialValues, ...pr };
 
 //   const [maxValue, setMaxValue] = useState(100);
   const [internalValue, setInternalValue] = useState(0);
@@ -26,24 +26,24 @@ export const DataSlider = (props: IProps) => {
   });
 
   const convertValue = () => {
-    if (props.value === 1) return 0;
-    if (props.value > 100) return 100;
-    if (props.value < 0) return 0;
+    if (pr.value === 1) return 0;
+    if (pr.value > 100) return 100;
+    if (pr.value < 0) return 0;
 
-    return props.value;
+    return pr.value;
   };
-  const designClassName = props.design ? `data-slider-wrapper--design-${props.design}`:'';
+  const designClassName = pr.design ? `data-slider-wrapper--design-${pr.design}`:'';
   return (
     <div className={  [s["data-slider-wrapper"],designClassName].join(" ")  }>
       <div className={s["slider-scale-values"]}>
         <>
-        {props.scaleValues.map((value, index) => {
+        {pr.scaleValues && pr.scaleValues.map((value, index) => (
           <div key={`val_${index}`} className={s["slider-scale-values__value"]}>
             {value}
-          </div>;
-        })}
-        {props.headline && (
-          <div className={s["slider-scale__headline"]}>{props.headline}</div>
+          </div>
+        ))}
+        {pr.headline && (
+          <div className={s["slider-scale__headline"]}>{pr.headline}</div>
         )}
         </>
       </div>

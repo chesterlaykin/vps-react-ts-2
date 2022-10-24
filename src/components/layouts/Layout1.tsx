@@ -1,27 +1,26 @@
 import { Logo } from "@@/common/core-sections/vps/Logo";
 import { Link } from "@@/common/global/vps/Link";
 import { Sidebar } from "@@/common/SideBar";
+import { menuItems } from '~/content-data';
+
 import "./layouts_common.scss";
-export function Layout1({ children }: { children: React.ReactNode }) {
+export function Layout1(pr: JSX.Props) {
+  const {children} = pr;
+
   return (
-    <div className="container">
-      <div className="grid layout layout-1">
+    <div className="container layout-1">
+      <div className="grid layout">
         <div className="g-col-sm-4 g-col-md-3 g-col-12 order-1 order-sm-0">
           <Sidebar className="sidebar">
-              <Logo />
-              <Link className="navitem" href="/">
-                Home
-              </Link>
-              <Link className="navitem" href="/about">
-                About
-              </Link>
-              <Link className="navitem" href="/timer">
-                Timer (Mobx)
-              </Link>
-              <Link className="navitem" href="/redux">
-                Redux tests
-              </Link>
-            </Sidebar>
+            <Logo/>
+            <div>
+            {menuItems.map((item, index) => (
+              <Link className={item.className} href={item.href} key={`menuitem_${index}`}>
+              {item.text}
+            </Link>
+            ))}
+            </div>
+          </Sidebar>
         </div>
         <div className="g-col-sm-8 g-col-md-9 g-col-12">{children}</div>
       </div>

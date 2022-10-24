@@ -1,7 +1,6 @@
 import { getExampleProd } from "@/dummy-data";
 import { isDefined } from "@/utils";
-import { useEffect, useState, useMemo } from "react";
-// import { ref, computed, onMounted } from "vue";
+import { useRef, useState, useMemo } from "react";
 import s from './product-card.module.scss';
 import { ProductCardFrontSide } from "./ProductCardFrontside";
 
@@ -14,26 +13,7 @@ export const ProductCard = ({ modelType, text }: IProps) => {
 
   const {variants} = product;
 
-  const productProps: any = useMemo(() => {
-    let prodProps = {};
-    if (modelType === "search") {
-      prodProps = {
-        title: product.productName,
-        image: product.primaryImage,
-        usps: [product.usp1, product.usp2].filter(isDefined),
-        priceFrom: cheapestVariantPriceFrom,
-        priceBefore: cheapestVariantPriceBefore,
-        productUrl: product.url,
-        productType: product.productType,
-        characteristicsRatings: {
-          washabilityRating: product?.washabilityRating,
-          glossRating: product.glossRating,
-        },
-      };
-    }
-    console.log("prodProps", prodProps);
-    return prodProps;
-  }, [modelType]);
+  const productCardWrapper = useRef(null);
 
   const cheapestVariant = useMemo(() => {
     if (!variants || !(variants instanceof Array)) {
@@ -53,10 +33,31 @@ export const ProductCard = ({ modelType, text }: IProps) => {
     });
   }, [product, variants]);
 
-  const cheapestVariantPriceBefore = !cheapestVariant || !product?.price?.hasDiscount ? null
-    : cheapestVariant?.price?.originalUnitPrice?.displayValue;
-
   const cheapestVariantPriceFrom = !cheapestVariant ? null : cheapestVariant?.price?.unitPrice?.displayValue;
+
+  const cheapestVariantPriceBefore = !cheapestVariant || !product?.price?.hasDiscount ? null
+  : cheapestVariant?.price?.originalUnitPrice?.displayValue;
+
+  const productProps: any = useMemo(() => {
+    let prodProps = {};
+    if (modelType === "search") {
+      prodProps = {
+        title: product.productName,
+        image: product.primaryImage,
+        usps: [product.usp1, product.usp2].filter(isDefined),
+        priceFrom: cheapestVariantPriceFrom,
+        priceBefore: cheapestVariantPriceBefore,
+        productUrl: product.url,
+        productType: product.productType,
+        characteristicsRatings: {
+          washabilityRating: product?.washabilityRating,
+          glossRating: product.glossRating,
+        },
+      };
+    }
+    return prodProps;
+  }, [modelType]);
+
 
   const dryingTimeText = useMemo(() => {
 
@@ -100,7 +101,7 @@ export const ProductCard = ({ modelType, text }: IProps) => {
 
   return (
     // ["product-card"]
-    <div ref="productCardWrapper" className={s["product-card"]}>
+    <div ref={productCardWrapper} className={s["product-card"]}>
       <ProductCardFrontSide {...productProps} />
     </div>
   );

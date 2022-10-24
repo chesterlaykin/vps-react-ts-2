@@ -40,7 +40,7 @@ export const ProductCardFrontSide = (pr: IProps) => {
         <>
           <div className={s["product-card-front__image-wrapper"]}>
             <img
-              className={s["product-card-front__image w-100"]}
+              className={ [s["product-card-front__image"], "w-100"].join(" ") }
               src={pr.image.url}
             />
           </div>
@@ -71,6 +71,7 @@ export const ProductCardFrontSide = (pr: IProps) => {
                 <DataSlider
                   value={glossRating}
                   scaleValues={glossScaleValues}
+                  design={'blue'}
                   headline={"Shine"}
                 />
               </div>

@@ -3,17 +3,10 @@
 @import "../bootstrap5.2/bootstrap.scss";
 
 /* independent */
-@import '../independent/mixins.scss';
-@import '../independent/utilitary.scss';
-@import '../independent/loop-generated.scss';
+@import '../independent/independent.scss';
 
 /* specific */
-@import '../specific/breakpoints.scss';
-@import '../specific/variables.scss';
-@import '../specific/colors.scss';
-@import '../specific/font.scss';
-@import '../specific/bootstrap-overwrites.scss';
-@import '../specific/loop-generated.scss';
+@import '../specific/specific.scss';
 
 @import '../main.scss';
 

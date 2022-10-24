@@ -1,7 +1,7 @@
 vps-react-ts-2
 
 - [VPS-react-ts-2](#vps-react-ts-2)
-- [Comments](#comments)
+- [Added parts (continuous notes)](#added-parts-continuous-notes)
   - [oct 2022](#oct-2022)
 - [Installed dependencies + configurations](#installed-dependencies--configurations)
   - [**Vite-plugin-ssr**](#vite-plugin-ssr)
@@ -16,7 +16,8 @@ vps-react-ts-2
 
 # VPS-react-ts-2
 VPS-react-ts-2 (Vite-plugin-ssr with react + typescript)
-# Comments
+
+# Added parts (continuous notes)
 
 ## oct 2022
 
