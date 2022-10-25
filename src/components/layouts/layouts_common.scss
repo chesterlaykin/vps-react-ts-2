@@ -1,10 +1,27 @@
-.layout {
-    gap: 0;
+
+/* ============ Common layouts rules ============== */
+.page-content {
+    padding-top: 30px;
 }
 
+/* ======== combined layouts rules ========== */
+.layout-1,
+.layout-2 {
+    // padding-top: 30px;
+}
+
+/* ================== Layouts ==================== */
+
+/* ---------------------- Layout 1 ---------------------- */
 .layout-1 {
     
+    .grid {
+        gap: 0;
+    }
     .sidebar {
         background: rgb(216, 255, 216);
     }
+}
+/* ---------------------- Layout 2 ---------------------- */
+.layout-2 {
 }

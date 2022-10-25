@@ -1,11 +1,34 @@
 /*
   Contents:
-
+    - customize default values
     - html elements
     - foundational parts
     - other 
 
 */
+
+/* ========================== customize default values ==========================*/
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+input,
+input:focus  {
+  border: none;
+}
+
+:focus:not(:focus-visible) { 
+  outline: none;
+}
+
+:focus-visible {
+  border: none;
+  border-radius: 2px;
+}
 
 /* -------------- html elements ----------------- */
 body {

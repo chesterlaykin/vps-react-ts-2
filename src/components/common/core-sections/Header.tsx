@@ -6,14 +6,14 @@ type IProps = {
 };
 export const Header = (pr: IProps) => {
   return (
-    <div id="header" className={s["header flex flex-center"]}>
+    <div className={[s["header"],"flex flex-center"].join(" ")}>
       <div
         className={[s["header__inner"], "container flex align-center"].join(
           " "
         )}
       >
-        <div className={s["flex-1"]}>
-          <a className={s["logo"]} href="/">
+        <div className={`${s.logo} ${s['flex-1']}`}>
+          <a href="/" className={s['logo__link']}>
             Logo
           </a>
         </div>

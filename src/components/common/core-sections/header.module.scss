@@ -1,16 +1,15 @@
 //Temporary colors
 $border1: rgb(234, 234, 234);
 
-#header {
-  height: 55px;
-  min-height: 85px;
+.header {
+  height: 60px;
   border-bottom: $border1 1px solid;
-    
+
   &__inner {
     display: flex;
   }
   nav ul > li > a,
-  .logo,
+  .logo__link,
   .search-bar input {
     padding: 12px;
   }

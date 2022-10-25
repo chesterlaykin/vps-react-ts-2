@@ -12,6 +12,6 @@ export interface ITopicPost{
 }
 export interface IMenuItem{
     className: string
-    href?: string
+    href: string
     text: string
 }

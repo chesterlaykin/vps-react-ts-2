@@ -12,10 +12,10 @@ export const Page = ( pr : IProps) => {
     return (
         <div className="product-page">
         <h1>Product</h1>
-        <div className="container">
+        <div>
             <div className="grid">
                 { [1,2,3,4].map ((prod, index) => (
-                     <div className="g-col-6 g-col-sm-3" key={`prod_${index}`}>
+                     <div className="g-col-6 g-col-sm-4 g-col-lg-3" key={`prod_${index}`}>
                      <ProductCard modelType={'search'} text={'hello'}/>
                      </div>
                 ))}
